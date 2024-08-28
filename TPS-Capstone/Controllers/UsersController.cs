@@ -48,7 +48,7 @@ namespace TPS_Capstone.Controllers
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID");
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace TPS_Capstone.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID", user.UserRoleID);
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID", user.UserRoleID);
             return View(user);
         }
 
@@ -82,7 +82,7 @@ namespace TPS_Capstone.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID", user.UserRoleID);
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID", user.UserRoleID);
             return View(user);
         }
 
@@ -118,7 +118,7 @@ namespace TPS_Capstone.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID", user.UserRoleID);
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID", user.UserRoleID);
             return View(user);
         }
 

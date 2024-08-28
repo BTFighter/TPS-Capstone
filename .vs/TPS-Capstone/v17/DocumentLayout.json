@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\views\\rents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|solutionrelative:tps-capstone\\views\\rents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\models\\rent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|solutionrelative:tps-capstone\\models\\rent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Migrations\\20240828011128_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TPS-Capstone\\Migrations\\20240828011128_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Migrations\\20240828014122_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TPS-Capstone\\Migrations\\20240828014122_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\views\\quote\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|solutionrelative:tps-capstone\\views\\quote\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|solutionrelative:tps-capstone\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|solutionrelative:tps-capstone\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|solutionrelative:tps-capstone\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A46B073C-F0DE-4CBB-A175-CF646243CE7C}|TPS-Capstone\\TPS-Capstone.csproj|c:\\users\\plumbab\\documents\\github\\tps-capstone\\tps-capstone\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,43 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Views\\Rents\\Create.cshtml",
-              "RelativeDocumentMoniker": "TPS-Capstone\\Views\\Rents\\Create.cshtml",
-              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Views\\Rents\\Create.cshtml",
-              "RelativeToolTip": "TPS-Capstone\\Views\\Rents\\Create.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-28T01:15:52.99Z",
+              "DocumentIndex": 1,
+              "Title": "20240828014122_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Migrations\\20240828014122_InitialCreate.cs",
+              "RelativeDocumentMoniker": "TPS-Capstone\\Migrations\\20240828014122_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Migrations\\20240828014122_InitialCreate.cs",
+              "RelativeToolTip": "TPS-Capstone\\Migrations\\20240828014122_InitialCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T01:41:22.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20240828011128_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Migrations\\20240828011128_InitialCreate.cs",
-              "RelativeDocumentMoniker": "TPS-Capstone\\Migrations\\20240828011128_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Migrations\\20240828011128_InitialCreate.cs",
-              "RelativeToolTip": "TPS-Capstone\\Migrations\\20240828011128_InitialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Rent.cs",
+              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Models\\Rent.cs",
+              "RelativeDocumentMoniker": "TPS-Capstone\\Models\\Rent.cs",
+              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Models\\Rent.cs",
+              "RelativeToolTip": "TPS-Capstone\\Models\\Rent.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T01:11:28.658Z",
+              "WhenOpened": "2024-08-28T01:36:26.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Views\\Quote\\Index.cshtml",
+              "RelativeDocumentMoniker": "TPS-Capstone\\Views\\Quote\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Views\\Quote\\Index.cshtml",
+              "RelativeToolTip": "TPS-Capstone\\Views\\Quote\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T01:29:04.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "TPS-Capstone\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "TPS-Capstone\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T01:25:47.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TPS-Capstone\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TPS-Capstone\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T01:25:40.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "TPS-Capstone\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "TPS-Capstone\\Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T01:25:20.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Models\\User.cs",
               "RelativeDocumentMoniker": "TPS-Capstone\\Models\\User.cs",
               "ToolTip": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\Models\\User.cs",
               "RelativeToolTip": "TPS-Capstone\\Models\\User.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T00:02:54.992Z",
               "EditorCaption": ""

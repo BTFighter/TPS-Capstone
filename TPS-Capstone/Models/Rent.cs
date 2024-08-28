@@ -12,11 +12,10 @@ namespace TPS_Capstone.Models
 
         public string Email { get; set; }
 
-        [MaxLength(11, ErrorMessage = "Your Phone Number exceeds 11 numbers.")]
         [Display(Name = "Contact Number")]
         public int PhoneNumber { get; set; }
 
-        [Display(Name = "Return Date")]
+        [Display(Name = "Pickup Date")]
         [DataType(DataType.Date)]
         public DateTime DateStart { get; set; }
 

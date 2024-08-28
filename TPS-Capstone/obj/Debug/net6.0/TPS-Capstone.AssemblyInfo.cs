@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPS-Capstone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7042323b7ee1d6abbea1f1a70333e9742ba5222e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01e7e5c28559bd83fe77219939258b335683b17e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPS-Capstone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPS-Capstone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

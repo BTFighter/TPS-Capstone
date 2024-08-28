@@ -118,7 +118,6 @@ namespace TPS_Capstone.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("PhoneNumber")
-                        .HasMaxLength(11)
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")

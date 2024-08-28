@@ -12,7 +12,7 @@ using TPS_Capstone.Data;
 namespace TPS_Capstone.Migrations
 {
     [DbContext(typeof(TPS_CapstoneContext))]
-    [Migration("20240828011128_InitialCreate")]
+    [Migration("20240828015152_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -120,7 +120,6 @@ namespace TPS_Capstone.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("PhoneNumber")
-                        .HasMaxLength(11)
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
