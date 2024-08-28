@@ -1,14 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApplication3.Models
+namespace TPS_Capstone.Models
 {
     public class OrderType
     {
-        /*[Key]
+        [Key]
         public int OrderTypeID { get; set; }
 
         [Required]
-        public string OrderName { get; set; }*/
+        public string OrderTypeName { get; set; }
     }
 }

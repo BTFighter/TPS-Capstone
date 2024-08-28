@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TPS_CapstoneContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TPS_CapstoneContext") ?? throw new InvalidOperationException("Connection string 'TPS_CapstoneContext' not found.")));
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

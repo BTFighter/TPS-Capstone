@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TPS_Capstone.Data;
-using WebApplication3.Models;
+using TPS_Capstone.Models;
 
 namespace TPS_Capstone.Controllers
 {
@@ -22,7 +22,7 @@ namespace TPS_Capstone.Controllers
         // GET: Rents
         public async Task<IActionResult> Index()
         {
-            var tPS_CapstoneContext = _context.Rent.Include(r => r.Customer);
+            var tPS_CapstoneContext = _context.Rent.Include(r => r.OrderType);
             return View(await tPS_CapstoneContext.ToListAsync());
         }
 
@@ -35,8 +35,8 @@ namespace TPS_Capstone.Controllers
             }
 
             var rent = await _context.Rent
-                .Include(r => r.Customer)
-                .FirstOrDefaultAsync(m => m.RentId == id);
+                .Include(r => r.OrderType)
+                .FirstOrDefaultAsync(m => m.RentID == id);
             if (rent == null)
             {
                 return NotFound();
@@ -48,7 +48,7 @@ namespace TPS_Capstone.Controllers
         // GET: Rents/Create
         public IActionResult Create()
         {
-            ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerAddress");
+            ViewData["OrderTypeID"] = new SelectList(_context.OrderType, "OrderTypeID", "OrderTypeName");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RentId,CustomerId,ReturnDate,PickupDate")] Rent rent)
+        public async Task<IActionResult> Create([Bind("RentID,CustomerName,Email,PhoneNumber,DateStart,ReturnDate,Description,Quantity,OrderTypeID")] Rent rent)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace TPS_Capstone.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerAddress", rent.CustomerId);
+            ViewData["OrderTypeID"] = new SelectList(_context.OrderType, "OrderTypeID", "OrderTypeName", rent.OrderTypeID);
             return View(rent);
         }
 
@@ -82,7 +82,7 @@ namespace TPS_Capstone.Controllers
             {
                 return NotFound();
             }
-            ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerAddress", rent.CustomerId);
+            ViewData["OrderTypeID"] = new SelectList(_context.OrderType, "OrderTypeID", "OrderTypeName", rent.OrderTypeID);
             return View(rent);
         }
 
@@ -91,9 +91,9 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("RentId,CustomerId,ReturnDate,PickupDate")] Rent rent)
+        public async Task<IActionResult> Edit(int id, [Bind("RentID,CustomerName,Email,PhoneNumber,DateStart,ReturnDate,Description,Quantity,OrderTypeID")] Rent rent)
         {
-            if (id != rent.RentId)
+            if (id != rent.RentID)
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace TPS_Capstone.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RentExists(rent.RentId))
+                    if (!RentExists(rent.RentID))
                     {
                         return NotFound();
                     }
@@ -118,7 +118,7 @@ namespace TPS_Capstone.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerAddress", rent.CustomerId);
+            ViewData["OrderTypeID"] = new SelectList(_context.OrderType, "OrderTypeID", "OrderTypeName", rent.OrderTypeID);
             return View(rent);
         }
 
@@ -131,8 +131,8 @@ namespace TPS_Capstone.Controllers
             }
 
             var rent = await _context.Rent
-                .Include(r => r.Customer)
-                .FirstOrDefaultAsync(m => m.RentId == id);
+                .Include(r => r.OrderType)
+                .FirstOrDefaultAsync(m => m.RentID == id);
             if (rent == null)
             {
                 return NotFound();
@@ -162,7 +162,7 @@ namespace TPS_Capstone.Controllers
 
         private bool RentExists(int id)
         {
-          return (_context.Rent?.Any(e => e.RentId == id)).GetValueOrDefault();
+          return (_context.Rent?.Any(e => e.RentID == id)).GetValueOrDefault();
         }
     }
 }

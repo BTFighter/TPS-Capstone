@@ -22,109 +22,41 @@ namespace TPS_Capstone.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("WebApplication3.Models.Category", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.Category", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("CategoryID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"), 1L, 1);
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CategoryId");
+                    b.HasKey("CategoryID");
 
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Customer", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.OrderType", b =>
                 {
-                    b.Property<int>("CustomerId")
+                    b.Property<int>("OrderTypeID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderTypeID"), 1L, 1);
 
-                    b.Property<string>("CustomerAddress")
+                    b.Property<string>("OrderTypeName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CustomerContact")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                    b.HasKey("OrderTypeID");
 
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CustomerId");
-
-                    b.ToTable("Customer");
+                    b.ToTable("OrderType");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.OrderItem", b =>
-                {
-                    b.Property<int>("OrderItemID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemID"), 1L, 1);
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderItemID");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("OrderItem");
-                });
-
-            modelBuilder.Entity("WebApplication3.Models.Orders", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"), 1L, 1);
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("OrderTotal")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrderId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("WebApplication3.Models.Product", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.Product", b =>
                 {
                     b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd()
@@ -132,107 +64,85 @@ namespace TPS_Capstone.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"), 1L, 1);
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProductName")
+                    b.Property<string>("Brand")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("ProductPrice")
-                        .HasColumnType("float");
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
 
-                    b.Property<bool>("isRentable")
-                        .HasColumnType("bit");
+                    b.Property<string>("Models")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SerialNumber")
+                        .HasMaxLength(12)
+                        .HasColumnType("int");
+
+                    b.Property<string>("Specifications")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductID");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("CategoryID");
 
                     b.ToTable("Product");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Rent", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.Rent", b =>
                 {
-                    b.Property<int>("RentId")
+                    b.Property<int>("RentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RentId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RentID"), 1L, 1);
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("PickupDate")
+                    b.Property<DateTime>("DateStart")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("ReturnDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
-                    b.HasKey("RentId");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Rent");
-                });
-
-            modelBuilder.Entity("WebApplication3.Models.RentItem", b =>
-                {
-                    b.Property<int>("RentItemID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("OrderTypeID")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RentItemID"), 1L, 1);
-
-                    b.Property<int>("ProductID")
+                    b.Property<int>("PhoneNumber")
+                        .HasMaxLength(11)
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("RentId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("ReturnDate")
+                        .HasColumnType("datetime2");
 
-                    b.HasKey("RentItemID");
+                    b.HasKey("RentID");
 
-                    b.HasIndex("ProductID");
+                    b.HasIndex("OrderTypeID");
 
-                    b.HasIndex("RentId");
-
-                    b.ToTable("RentItem");
+                    b.ToTable("Rent");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.UserRoles", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.User", b =>
                 {
-                    b.Property<int>("UserRoleId")
+                    b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserRoleId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"), 1L, 1);
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserRole")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserRoleId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRoles");
-                });
-
-            modelBuilder.Entity("WebApplication3.Models.Users", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
-
-                    b.Property<string>("EmailAddress")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -248,108 +158,72 @@ namespace TPS_Capstone.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
+                    b.Property<int>("PhoneNumber")
                         .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserRoleID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("UserID");
 
-                    b.ToTable("Users");
+                    b.HasIndex("UserRoleID");
+
+                    b.ToTable("User");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.OrderItem", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.UserRole", b =>
                 {
-                    b.HasOne("WebApplication3.Models.Orders", "Orders")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("UserRoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("WebApplication3.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserRoleID"), 1L, 1);
 
-                    b.Navigation("Orders");
+                    b.Property<string>("UserRoleName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Navigation("Product");
+                    b.HasKey("UserRoleID");
+
+                    b.ToTable("UserRole");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Orders", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.Product", b =>
                 {
-                    b.HasOne("WebApplication3.Models.Customer", "Customer")
+                    b.HasOne("TPS_Capstone.Models.Category", "Category")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebApplication3.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-
-                    b.Navigation("Product");
+                    b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Product", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.Rent", b =>
                 {
-                    b.HasOne("WebApplication3.Models.Category", "CategoryName")
+                    b.HasOne("TPS_Capstone.Models.OrderType", "OrderType")
                         .WithMany()
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("OrderTypeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CategoryName");
+                    b.Navigation("OrderType");
                 });
 
-            modelBuilder.Entity("WebApplication3.Models.Rent", b =>
+            modelBuilder.Entity("TPS_Capstone.Models.User", b =>
                 {
-                    b.HasOne("WebApplication3.Models.Customer", "Customer")
+                    b.HasOne("TPS_Capstone.Models.UserRole", "UserRole")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("UserRoleID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("WebApplication3.Models.RentItem", b =>
-                {
-                    b.HasOne("WebApplication3.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApplication3.Models.Rent", "Rent")
-                        .WithMany()
-                        .HasForeignKey("RentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("Rent");
-                });
-
-            modelBuilder.Entity("WebApplication3.Models.UserRoles", b =>
-                {
-                    b.HasOne("WebApplication3.Models.Users", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                    b.Navigation("UserRole");
                 });
 #pragma warning restore 612, 618
         }

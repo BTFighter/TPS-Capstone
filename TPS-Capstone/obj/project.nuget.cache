@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6CYnj35AnI0=",
+  "dgSpecHash": "MSYprTHjYQ0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PLumbab\\source\\repos\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj",
+  "projectFilePath": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PLumbab\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\PLumbab\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

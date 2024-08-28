@@ -6,91 +6,91 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TPS_Capstone.Data;
-using WebApplication3.Models;
+using TPS_Capstone.Models;
 
 namespace TPS_Capstone.Controllers
 {
-    public class CustomersController : Controller
+    public class OrderTypesController : Controller
     {
         private readonly TPS_CapstoneContext _context;
 
-        public CustomersController(TPS_CapstoneContext context)
+        public OrderTypesController(TPS_CapstoneContext context)
         {
             _context = context;
         }
 
-        // GET: Customers
+        // GET: OrderTypes
         public async Task<IActionResult> Index()
         {
-              return _context.Customer != null ? 
-                          View(await _context.Customer.ToListAsync()) :
-                          Problem("Entity set 'TPS_CapstoneContext.Customer'  is null.");
+              return _context.OrderType != null ? 
+                          View(await _context.OrderType.ToListAsync()) :
+                          Problem("Entity set 'TPS_CapstoneContext.OrderType'  is null.");
         }
 
-        // GET: Customers/Details/5
+        // GET: OrderTypes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Customer == null)
+            if (id == null || _context.OrderType == null)
             {
                 return NotFound();
             }
 
-            var customer = await _context.Customer
-                .FirstOrDefaultAsync(m => m.CustomerId == id);
-            if (customer == null)
+            var orderType = await _context.OrderType
+                .FirstOrDefaultAsync(m => m.OrderTypeID == id);
+            if (orderType == null)
             {
                 return NotFound();
             }
 
-            return View(customer);
+            return View(orderType);
         }
 
-        // GET: Customers/Create
+        // GET: OrderTypes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Customers/Create
+        // POST: OrderTypes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CustomerId,CustomerName,Email,CustomerContact,CustomerAddress")] Customer customer)
+        public async Task<IActionResult> Create([Bind("OrderTypeID,OrderTypeName")] OrderType orderType)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(customer);
+                _context.Add(orderType);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return View(orderType);
         }
 
-        // GET: Customers/Edit/5
+        // GET: OrderTypes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Customer == null)
+            if (id == null || _context.OrderType == null)
             {
                 return NotFound();
             }
 
-            var customer = await _context.Customer.FindAsync(id);
-            if (customer == null)
+            var orderType = await _context.OrderType.FindAsync(id);
+            if (orderType == null)
             {
                 return NotFound();
             }
-            return View(customer);
+            return View(orderType);
         }
 
-        // POST: Customers/Edit/5
+        // POST: OrderTypes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CustomerId,CustomerName,Email,CustomerContact,CustomerAddress")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("OrderTypeID,OrderTypeName")] OrderType orderType)
         {
-            if (id != customer.CustomerId)
+            if (id != orderType.OrderTypeID)
             {
                 return NotFound();
             }
@@ -99,12 +99,12 @@ namespace TPS_Capstone.Controllers
             {
                 try
                 {
-                    _context.Update(customer);
+                    _context.Update(orderType);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CustomerExists(customer.CustomerId))
+                    if (!OrderTypeExists(orderType.OrderTypeID))
                     {
                         return NotFound();
                     }
@@ -115,49 +115,49 @@ namespace TPS_Capstone.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return View(orderType);
         }
 
-        // GET: Customers/Delete/5
+        // GET: OrderTypes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Customer == null)
+            if (id == null || _context.OrderType == null)
             {
                 return NotFound();
             }
 
-            var customer = await _context.Customer
-                .FirstOrDefaultAsync(m => m.CustomerId == id);
-            if (customer == null)
+            var orderType = await _context.OrderType
+                .FirstOrDefaultAsync(m => m.OrderTypeID == id);
+            if (orderType == null)
             {
                 return NotFound();
             }
 
-            return View(customer);
+            return View(orderType);
         }
 
-        // POST: Customers/Delete/5
+        // POST: OrderTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Customer == null)
+            if (_context.OrderType == null)
             {
-                return Problem("Entity set 'TPS_CapstoneContext.Customer'  is null.");
+                return Problem("Entity set 'TPS_CapstoneContext.OrderType'  is null.");
             }
-            var customer = await _context.Customer.FindAsync(id);
-            if (customer != null)
+            var orderType = await _context.OrderType.FindAsync(id);
+            if (orderType != null)
             {
-                _context.Customer.Remove(customer);
+                _context.OrderType.Remove(orderType);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CustomerExists(int id)
+        private bool OrderTypeExists(int id)
         {
-          return (_context.Customer?.Any(e => e.CustomerId == id)).GetValueOrDefault();
+          return (_context.OrderType?.Any(e => e.OrderTypeID == id)).GetValueOrDefault();
         }
     }
 }

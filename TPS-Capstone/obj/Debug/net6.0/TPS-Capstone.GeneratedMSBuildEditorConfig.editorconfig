@@ -38,26 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Customers/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Customers/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Customers/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Customers/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Customers/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,44 +50,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderItems/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJdGVtc1xDcmVhdGUuY3NodG1s
+[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUeXBlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderItems/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJdGVtc1xEZWxldGUuY3NodG1s
+[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUeXBlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderItems/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJdGVtc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUeXBlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderItems/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJdGVtc1xFZGl0LmNzaHRtbA==
+[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUeXBlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderItems/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJdGVtc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Orders/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Orders/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Orders/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Orders/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Orders/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
+[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/OrderTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJUeXBlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Products/Create.cshtml]
@@ -128,30 +88,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Quote/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVvdGVcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/RentItems/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudEl0ZW1zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/RentItems/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudEl0ZW1zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/RentItems/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudEl0ZW1zXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/RentItems/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudEl0ZW1zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/RentItems/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVudEl0ZW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/PLumbab/Documents/GitHub/TPS-Capstone/TPS-Capstone/Views/Rents/Create.cshtml]

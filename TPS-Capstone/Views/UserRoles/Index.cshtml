@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebApplication3.Models.UserRoles>
+﻿@model IEnumerable<TPS_Capstone.Models.UserRole>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,10 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserRole)
+                @Html.DisplayNameFor(model => model.UserRoleName)
             </th>
             <th></th>
         </tr>
@@ -25,15 +22,12 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.User.EmailAddress)
+                @Html.DisplayFor(modelItem => item.UserRoleName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserRole)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.UserRoleId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.UserRoleId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.UserRoleId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.UserRoleID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserRoleID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserRoleID">Delete</a>
             </td>
         </tr>
 }

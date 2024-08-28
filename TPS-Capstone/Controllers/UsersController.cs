@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TPS_Capstone.Data;
-using WebApplication3.Models;
+using TPS_Capstone.Models;
 
 namespace TPS_Capstone.Controllers
 {
@@ -22,32 +22,33 @@ namespace TPS_Capstone.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-              return _context.Users != null ? 
-                          View(await _context.Users.ToListAsync()) :
-                          Problem("Entity set 'TPS_CapstoneContext.Users'  is null.");
+            var tPS_CapstoneContext = _context.User.Include(u => u.UserRole);
+            return View(await tPS_CapstoneContext.ToListAsync());
         }
 
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Users == null)
+            if (id == null || _context.User == null)
             {
                 return NotFound();
             }
 
-            var users = await _context.Users
-                .FirstOrDefaultAsync(m => m.UserId == id);
-            if (users == null)
+            var user = await _context.User
+                .Include(u => u.UserRole)
+                .FirstOrDefaultAsync(m => m.UserID == id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(users);
+            return View(user);
         }
 
         // GET: Users/Create
         public IActionResult Create()
         {
+            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID");
             return View();
         }
 
@@ -56,31 +57,33 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserId,Username,Password,EmailAddress,PhoneNumber,FirstName,LastName")] Users users)
+        public async Task<IActionResult> Create([Bind("UserID,Username,Password,Email,PhoneNumber,FirstName,LastName,UserRoleID")] User user)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(users);
+                _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(users);
+            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID", user.UserRoleID);
+            return View(user);
         }
 
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Users == null)
+            if (id == null || _context.User == null)
             {
                 return NotFound();
             }
 
-            var users = await _context.Users.FindAsync(id);
-            if (users == null)
+            var user = await _context.User.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
-            return View(users);
+            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID", user.UserRoleID);
+            return View(user);
         }
 
         // POST: Users/Edit/5
@@ -88,9 +91,9 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,Username,Password,EmailAddress,PhoneNumber,FirstName,LastName")] Users users)
+        public async Task<IActionResult> Edit(int id, [Bind("UserID,Username,Password,Email,PhoneNumber,FirstName,LastName,UserRoleID")] User user)
         {
-            if (id != users.UserId)
+            if (id != user.UserID)
             {
                 return NotFound();
             }
@@ -99,12 +102,12 @@ namespace TPS_Capstone.Controllers
             {
                 try
                 {
-                    _context.Update(users);
+                    _context.Update(user);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsersExists(users.UserId))
+                    if (!UserExists(user.UserID))
                     {
                         return NotFound();
                     }
@@ -115,25 +118,27 @@ namespace TPS_Capstone.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(users);
+            ViewData["UserRoleID"] = new SelectList(_context.Set<UserRole>(), "UserRoleID", "UserRoleID", user.UserRoleID);
+            return View(user);
         }
 
         // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Users == null)
+            if (id == null || _context.User == null)
             {
                 return NotFound();
             }
 
-            var users = await _context.Users
-                .FirstOrDefaultAsync(m => m.UserId == id);
-            if (users == null)
+            var user = await _context.User
+                .Include(u => u.UserRole)
+                .FirstOrDefaultAsync(m => m.UserID == id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(users);
+            return View(user);
         }
 
         // POST: Users/Delete/5
@@ -141,23 +146,23 @@ namespace TPS_Capstone.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Users == null)
+            if (_context.User == null)
             {
-                return Problem("Entity set 'TPS_CapstoneContext.Users'  is null.");
+                return Problem("Entity set 'TPS_CapstoneContext.User'  is null.");
             }
-            var users = await _context.Users.FindAsync(id);
-            if (users != null)
+            var user = await _context.User.FindAsync(id);
+            if (user != null)
             {
-                _context.Users.Remove(users);
+                _context.User.Remove(user);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UsersExists(int id)
+        private bool UserExists(int id)
         {
-          return (_context.Users?.Any(e => e.UserId == id)).GetValueOrDefault();
+          return (_context.User?.Any(e => e.UserID == id)).GetValueOrDefault();
         }
     }
 }

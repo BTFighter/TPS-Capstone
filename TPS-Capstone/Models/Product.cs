@@ -1,31 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Composition.Convention;
 
-namespace WebApplication3.Models
+namespace TPS_Capstone.Models
 {
     public class Product
     {
         [Key]
         public int ProductID { get; set; }
 
-        [Required]
-        [Display(Name = "Product Name")]
-        public string ProductName { get; set; }
+        public string Models { get; set; }
 
-        [Required]
-        [Display(Name = "Price")]
-        public double ProductPrice { get; set; }
+        public string Brand { get; set; }
 
-        [Required]
+        public string Specifications { get; set; }
+
+        [MaxLength(12, ErrorMessage = "Your Serial Number exceeds the maximum characters")]
+        public int SerialNumber { get; set; }
+
         [Display(Name = "Category")]
-        public int CategoryId { get; set; }
+        public int CategoryID { get; set; }
 
-        [Required]
-        [ForeignKey("CategoryId")]
-        public Category? CategoryName { get; set; }
-
-        [Required]
-        [Display(Name = "Availability")]
-        public bool isRentable { get; set; }
+        [ForeignKey("CategoryID")]
+        public Category Category { get; set; }
     }
 }

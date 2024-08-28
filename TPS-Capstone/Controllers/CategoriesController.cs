@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TPS_Capstone.Data;
-using WebApplication3.Models;
+using TPS_Capstone.Models;
 
 namespace TPS_Capstone.Controllers
 {
@@ -36,7 +36,7 @@ namespace TPS_Capstone.Controllers
             }
 
             var category = await _context.Category
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
+                .FirstOrDefaultAsync(m => m.CategoryID == id);
             if (category == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,CategoryName")] Category category)
+        public async Task<IActionResult> Create([Bind("CategoryID,CategoryName")] Category category)
         {
             if (ModelState.IsValid)
             {
@@ -88,9 +88,9 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryId,CategoryName")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("CategoryID,CategoryName")] Category category)
         {
-            if (id != category.CategoryId)
+            if (id != category.CategoryID)
             {
                 return NotFound();
             }
@@ -104,7 +104,7 @@ namespace TPS_Capstone.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CategoryId))
+                    if (!CategoryExists(category.CategoryID))
                     {
                         return NotFound();
                     }
@@ -127,7 +127,7 @@ namespace TPS_Capstone.Controllers
             }
 
             var category = await _context.Category
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
+                .FirstOrDefaultAsync(m => m.CategoryID == id);
             if (category == null)
             {
                 return NotFound();
@@ -157,7 +157,7 @@ namespace TPS_Capstone.Controllers
 
         private bool CategoryExists(int id)
         {
-          return (_context.Category?.Any(e => e.CategoryId == id)).GetValueOrDefault();
+          return (_context.Category?.Any(e => e.CategoryID == id)).GetValueOrDefault();
         }
     }
 }
