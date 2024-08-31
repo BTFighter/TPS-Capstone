@@ -1,0 +1,38 @@
+.card {
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-img-top{
+width: 100%;
+height: 25vw;
+object-fit: cover;
+}
+
+h1{
+    font-family: fantasy;
+    color: #0064AC;
+
+}
+
+h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+blockquote{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+  body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+
+
+
+
+
