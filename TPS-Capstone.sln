@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS-Capstone", "TPS-Capstone\TPS-Capstone.csproj", "{A46B073C-F0DE-4CBB-A175-CF646243CE7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS-Capstone", "TPS-Capstone\TPS-Capstone.csproj", "{6E6769F4-564C-4D0C-ACE7-E8029C1984D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A46B073C-F0DE-4CBB-A175-CF646243CE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A46B073C-F0DE-4CBB-A175-CF646243CE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A46B073C-F0DE-4CBB-A175-CF646243CE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A46B073C-F0DE-4CBB-A175-CF646243CE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6769F4-564C-4D0C-ACE7-E8029C1984D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6769F4-564C-4D0C-ACE7-E8029C1984D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6769F4-564C-4D0C-ACE7-E8029C1984D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6769F4-564C-4D0C-ACE7-E8029C1984D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6C3C0359-9F45-4E1B-AA7E-9518C38A36A9}
+		SolutionGuid = {11E4B2C0-C1BD-4F02-84F4-BEE870881CDB}
 	EndGlobalSection
 EndGlobal

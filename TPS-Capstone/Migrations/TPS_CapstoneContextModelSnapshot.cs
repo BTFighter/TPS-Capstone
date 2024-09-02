@@ -39,6 +39,74 @@ namespace TPS_Capstone.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("TPS_Capstone.Models.Order", b =>
+                {
+                    b.Property<int>("OrderID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderID"), 1L, 1);
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateStart")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderTypeID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<DateTime>("ReturnDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("OrderID");
+
+                    b.HasIndex("OrderTypeID");
+
+                    b.ToTable("Rent");
+                });
+
+            modelBuilder.Entity("TPS_Capstone.Models.OrderItem", b =>
+                {
+                    b.Property<int>("OrderItemID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemID"), 1L, 1);
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderItemID");
+
+                    b.HasIndex("ProductID");
+
+                    b.HasIndex("RentID");
+
+                    b.ToTable("QueryItem");
+                });
+
             modelBuilder.Entity("TPS_Capstone.Models.OrderType", b =>
                 {
                     b.Property<int>("OrderTypeID")
@@ -75,6 +143,9 @@ namespace TPS_Capstone.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
                     b.Property<int>("SerialNumber")
                         .HasMaxLength(12)
                         .HasColumnType("int");
@@ -83,54 +154,14 @@ namespace TPS_Capstone.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StockAvailable")
+                        .HasColumnType("int");
+
                     b.HasKey("ProductID");
 
                     b.HasIndex("CategoryID");
 
                     b.ToTable("Product");
-                });
-
-            modelBuilder.Entity("TPS_Capstone.Models.Rent", b =>
-                {
-                    b.Property<int>("RentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RentID"), 1L, 1);
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DateStart")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("OrderTypeID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("ReturnDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("RentID");
-
-                    b.HasIndex("OrderTypeID");
-
-                    b.ToTable("Rent");
                 });
 
             modelBuilder.Entity("TPS_Capstone.Models.User", b =>
@@ -155,7 +186,8 @@ namespace TPS_Capstone.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(24)
+                        .HasColumnType("nvarchar(24)");
 
                     b.Property<int>("PhoneNumber")
                         .HasMaxLength(11)
@@ -192,6 +224,36 @@ namespace TPS_Capstone.Migrations
                     b.ToTable("UserRole");
                 });
 
+            modelBuilder.Entity("TPS_Capstone.Models.Order", b =>
+                {
+                    b.HasOne("TPS_Capstone.Models.OrderType", "OrderType")
+                        .WithMany()
+                        .HasForeignKey("OrderTypeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("OrderType");
+                });
+
+            modelBuilder.Entity("TPS_Capstone.Models.OrderItem", b =>
+                {
+                    b.HasOne("TPS_Capstone.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TPS_Capstone.Models.Order", "Rent")
+                        .WithMany()
+                        .HasForeignKey("RentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Rent");
+                });
+
             modelBuilder.Entity("TPS_Capstone.Models.Product", b =>
                 {
                     b.HasOne("TPS_Capstone.Models.Category", "Category")
@@ -201,17 +263,6 @@ namespace TPS_Capstone.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("TPS_Capstone.Models.Rent", b =>
-                {
-                    b.HasOne("TPS_Capstone.Models.OrderType", "OrderType")
-                        .WithMany()
-                        .HasForeignKey("OrderTypeID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("OrderType");
                 });
 
             modelBuilder.Entity("TPS_Capstone.Models.User", b =>

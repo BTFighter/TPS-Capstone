@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj": {}
+    "C:\\Users\\PLumbab\\source\\repos\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj": {
+    "C:\\Users\\PLumbab\\source\\repos\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj",
+        "projectUniqueName": "C:\\Users\\PLumbab\\source\\repos\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj",
         "projectName": "TPS-Capstone",
-        "projectPath": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj",
+        "projectPath": "C:\\Users\\PLumbab\\source\\repos\\TPS-Capstone\\TPS-Capstone\\TPS-Capstone.csproj",
         "packagesPath": "C:\\Users\\PLumbab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PLumbab\\Documents\\GitHub\\TPS-Capstone\\TPS-Capstone\\obj\\",
+        "outputPath": "C:\\Users\\PLumbab\\source\\repos\\TPS-Capstone\\TPS-Capstone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PLumbab\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,15 +64,15 @@
               "target": "Package",
               "version": "[6.0.33, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.33, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.33, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration": {
-              "target": "Package",
-              "version": "[6.0.17, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

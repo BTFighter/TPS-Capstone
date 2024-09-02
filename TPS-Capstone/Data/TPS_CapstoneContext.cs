@@ -20,7 +20,9 @@ namespace TPS_Capstone.Data
 
         public DbSet<TPS_Capstone.Models.Product>? Product { get; set; }
 
-        public DbSet<TPS_Capstone.Models.Rent>? Rent { get; set; }
+        public DbSet<TPS_Capstone.Models.OrderItem>? QueryItem { get; set; }
+
+        public DbSet<TPS_Capstone.Models.Order>? Rent { get; set; }
 
         public DbSet<TPS_Capstone.Models.User>? User { get; set; }
 

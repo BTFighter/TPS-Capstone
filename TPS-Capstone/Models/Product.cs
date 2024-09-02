@@ -19,6 +19,10 @@ namespace TPS_Capstone.Models
         [MaxLength(12, ErrorMessage = "Your Serial Number exceeds the maximum characters")]
         public int SerialNumber { get; set; }
 
+        public double Price { get; set; }
+
+        public int StockAvailable { get; set; }
+
         [Display(Name = "Category")]
         public int CategoryID { get; set; }
 

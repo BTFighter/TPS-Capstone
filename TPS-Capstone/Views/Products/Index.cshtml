@@ -25,6 +25,12 @@
                 @Html.DisplayNameFor(model => model.SerialNumber)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockAvailable)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Category)
             </th>
             <th></th>
@@ -44,6 +50,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SerialNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockAvailable)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Category.CategoryName)

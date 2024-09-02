@@ -33,6 +33,16 @@
                 <span asp-validation-for="SerialNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StockAvailable" class="control-label"></label>
+                <input asp-for="StockAvailable" class="form-control" />
+                <span asp-validation-for="StockAvailable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="CategoryID" class="control-label"></label>
                 <select asp-for="CategoryID" class ="form-control" asp-items="ViewBag.CategoryID"></select>
             </div>

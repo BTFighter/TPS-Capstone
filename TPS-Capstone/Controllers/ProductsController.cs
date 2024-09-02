@@ -57,7 +57,7 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductID,Models,Brand,Specifications,SerialNumber,CategoryID")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductID,Models,Brand,Specifications,SerialNumber,Price,StockAvailable,CategoryID")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductID,Models,Brand,Specifications,SerialNumber,CategoryID")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductID,Models,Brand,Specifications,SerialNumber,Price,StockAvailable,CategoryID")] Product product)
         {
             if (id != product.ProductID)
             {

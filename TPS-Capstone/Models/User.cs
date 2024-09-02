@@ -12,6 +12,7 @@ namespace TPS_Capstone.Models
         public string Username { get; set; }
 
         [Required]
+        [StringLength(24, MinimumLength = 10)]
         public string Password { get; set; }
 
         public string Email { get; set; }

@@ -48,7 +48,7 @@ namespace TPS_Capstone.Controllers
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID");
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleName");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserID,Username,Password,Email,PhoneNumber,FirstName,LastName,UserRoleID")] User user)
+        public async Task<IActionResult> Create([Bind("UserID,Username,Password,Email,PhoneNumber,FirstName,LastName,UserRoleName")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace TPS_Capstone.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID", user.UserRoleID);
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleName", user.UserRoleID);
             return View(user);
         }
 
@@ -82,7 +82,7 @@ namespace TPS_Capstone.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID", user.UserRoleID);
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleName", user.UserRoleID);
             return View(user);
         }
 
@@ -91,7 +91,7 @@ namespace TPS_Capstone.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserID,Username,Password,Email,PhoneNumber,FirstName,LastName,UserRoleID")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserID,Username,Password,Email,PhoneNumber,FirstName,LastName,UserRoleName")] User user)
         {
             if (id != user.UserID)
             {
@@ -118,7 +118,7 @@ namespace TPS_Capstone.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleID", user.UserRoleID);
+            ViewData["UserRoleID"] = new SelectList(_context.UserRole, "UserRoleID", "UserRoleName", user.UserRoleID);
             return View(user);
         }
 
